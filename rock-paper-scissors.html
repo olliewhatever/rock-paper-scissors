@@ -1,0 +1,41 @@
+<script>
+	function upperFirst(string) 
+	{
+	    return string.charAt(0).toUpperCase() + string.slice(1);
+	}
+
+	function computerPlay () {
+		let computerSelection = Math.floor(Math.random() * (4 - 1)) + 1;
+		switch (computerSelection) {
+			case 1:
+				return computerSelection = "Rock";
+				break;
+			case 2:
+				return computerSelection = "Paper";
+				break;
+			case 3:
+				return computerSelection = "Scissors";
+				break;
+		}
+	}
+
+	function playRound (playerSelection, computerSelection) {
+		playerSelection = playerSelection.toLowerCase();
+		computerSelection = computerSelection.toLowerCase();
+
+		if (playerSelection == computerSelection) {
+			return "Draw! You both chose " + playerSelection + ".";
+		} else if ((playerSelection == "rock" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "rock")) {
+				return "You lose! " + upperFirst(computerSelection) + " beats " + playerSelection + ".";
+		} else if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
+				return "You win! " + upperFirst(playerSelection) + " beats " + computerSelection + ".";
+		}
+	}
+
+	function game() {
+		playerSelection = window.prompt("Rock, paper, or scissors?");
+		console.log(playRound(playerSelection, computerPlay()));
+	}
+
+	game();
+</script>
