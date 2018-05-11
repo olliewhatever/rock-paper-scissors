@@ -1,99 +1,69 @@
 <script>
-<<<<<<< HEAD
-	//Capitalizes first letter of string.
-=======
->>>>>>> 8579eab84edce5069822793e7a2ffe598499c349
-	function upperFirst(string) 
-	{
-	    return string.charAt(0).toUpperCase() + string.slice(1);
-	}
+ //Capitalizes first letter of string.
+ function upperFirst(string) 
+ {
+     return string.charAt(0).toUpperCase() + string.slice(1);
+ }
 
-<<<<<<< HEAD
-	//Creates randomized computer choice.
-=======
->>>>>>> 8579eab84edce5069822793e7a2ffe598499c349
-	function computerPlay () {
-		let computerSelection = Math.floor(Math.random() * (4 - 1)) + 1;
-		switch (computerSelection) {
-			case 1:
-<<<<<<< HEAD
-				return computerSelection = "rock";
-				break;
-			case 2:
-				return computerSelection = "paper";
-				break;
-			case 3:
-				return computerSelection = "scissors";
-=======
-				return computerSelection = "Rock";
-				break;
-			case 2:
-				return computerSelection = "Paper";
-				break;
-			case 3:
-				return computerSelection = "Scissors";
->>>>>>> 8579eab84edce5069822793e7a2ffe598499c349
-				break;
-		}
-	}
 
-<<<<<<< HEAD
-	//Plays round of rock, paper, scissors.
-	function playRound (playerSelection, computerSelection) {
-		playerSelection = playerSelection.toLowerCase();
+ //Creates randomized computer choice.
+ function computerPlay () {
+ 	let computerSelection = Math.floor(Math.random() * (4 - 1)) + 1;
+ 	switch (computerSelection) {
+ 		case 1:
+ 			return computerSelection = "rock";
+ 			break;
+ 		case 2:
+ 			return computerSelection = "paper";
+ 			break;
+ 		case 3:
+ 			return computerSelection = "scissors";
+ 			return computerSelection = "Rock";
+ 			break;
+ 		case 2:
+ 			return computerSelection = "Paper";
+ 			break;
+ 		case 3:
+ 			return computerSelection = "Scissors";
+ 			break;
+ 	}
+ }
 
-		if (playerSelection == computerSelection) {
-			 console.log("Draw! You both chose " + playerSelection + ".");
-		} else if ((playerSelection == "rock" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "rock")) {
-				console.log("You lose! " + upperFirst(computerSelection) + " beats " + playerSelection + ".");
-				return "computer";
-		} else if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
-				console.log("You win! " + upperFirst(playerSelection) + " beats " + computerSelection + ".");
-				return "player";
-		} else {
-			console.log("Invalid move! Please enter rock, paper, or scissors!");
-=======
-	function playRound (playerSelection, computerSelection) {
-		playerSelection = playerSelection.toLowerCase();
-		computerSelection = computerSelection.toLowerCase();
+ //Plays round of rock, paper, scissors.
+ function playRound (playerSelection, computerSelection) {
+ 	playerSelection = playerSelection.toLowerCase();
 
-		if (playerSelection == computerSelection) {
-			return "Draw! You both chose " + playerSelection + ".";
-		} else if ((playerSelection == "rock" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "rock")) {
-				return "You lose! " + upperFirst(computerSelection) + " beats " + playerSelection + ".";
-		} else if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
-				return "You win! " + upperFirst(playerSelection) + " beats " + computerSelection + ".";
->>>>>>> 8579eab84edce5069822793e7a2ffe598499c349
-		}
-	}
+ 	if (playerSelection == computerSelection) {
+ 		 console.log("Draw! You both chose " + playerSelection + ".");
+ 	} else if ((playerSelection == "rock" && computerSelection == "paper") || (playerSelection == "paper" && computerSelection == "scissors") || (playerSelection == "scissors" && computerSelection == "rock")) {
+ 			console.log("You lose! " + upperFirst(computerSelection) + " beats " + playerSelection + ".");
+ 			return "computer";
+ 	} else if ((playerSelection == "rock" && computerSelection == "scissors") || (playerSelection == "paper" && computerSelection == "rock") || (playerSelection == "scissors" && computerSelection == "paper")) {
+ 			console.log("You win! " + upperFirst(playerSelection) + " beats " + computerSelection + ".");
+ 			return "player";
+ 	} else {
+ 		console.log("Invalid move! Please enter rock, paper, or scissors!");
+ 	}
+ }
 
-	function game() {
-		playerSelection = window.prompt("Rock, paper, or scissors?");
-<<<<<<< HEAD
+ function game() {
+ 	playerSelection = window.prompt("Rock, paper, or scissors?");
 
-		let playerScore = 0;
-		let computerScore = 0;
-		let roundNumber = 0;
+ 	let playerScore = 0;
+ 	let computerScore = 0;
+ 	let roundNumber = 0;
 
-		switch (playRound(playerSelection, computerPlay())) {
-			case "player":
-				playerScore++;
-				roundNumber++;
-				break;
-			case "computer":
-				computerScore++;
-				roundNumber++;
-				break;
-		}
+ 	switch (playRound(playerSelection, computerPlay())) {
+ 		case "player":
+ 			playerScore++;
+ 			roundNumber++;
+ 			break;
+ 		case "computer":
+ 			computerScore++;
+ 			roundNumber++;
+ 			break;
+ 	}
+ }
 
-	}
-
-	game();
-
-=======
-		console.log(playRound(playerSelection, computerPlay()));
-	}
-
-	game();
->>>>>>> 8579eab84edce5069822793e7a2ffe598499c349
+ game();
 </script>
